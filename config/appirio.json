@@ -1,0 +1,16 @@
+{
+  "cmc": {
+    "enabled": true,
+    "products": ["Appirio DX"]
+  },
+  "continuousIntegrationType": "github",
+  "continuousIntegrationURL": "https://github.com",
+  "projectType": [
+    "sfdx"
+  ],
+  "rollbar": {
+    "enabled": true
+  },
+  "sourceBranchToClone": "SIT",
+  "sourceControlType": "git"
+}
