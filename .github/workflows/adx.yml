@@ -33,6 +33,7 @@ jobs:
         env:
           ADX_REFRESH_TOKEN: ${{ secrets.ADX_REFRESH_TOKEN }}
         run: |
+          whoami
           mkdir test
           adx deploy:source --sourcepath force-app/main/default --targetalias SIT
 
