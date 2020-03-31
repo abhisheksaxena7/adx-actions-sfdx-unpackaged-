@@ -22,7 +22,7 @@ jobs:
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
-      - uses: actions/checkout@v1
+      - uses: actions/checkout@master
 
       # Run ADX docker image
       - name: Run ADX
@@ -32,7 +32,7 @@ jobs:
       - name: Deploy To SIT
         env:
           ADX_REFRESH_TOKEN: ${{ secrets.ADX_REFRESH_TOKEN }}
-        run: sudo adx deploy:source --sourcepath force-app/main/default --targetalias SIT
+        run: adx deploy:source --sourcepath force-app/main/default --targetalias SIT
 
       # Runs a set of commands using the runners shell
       - name: Run a multi-line script
